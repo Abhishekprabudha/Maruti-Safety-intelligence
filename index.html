@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maruti India IMS Safety Intelligence Command Center | AIonOS Demo</title>
+  <meta name="description" content="Static GitHub Pages demo tailored for Maruti India: near-miss prediction, automated incident documentation, cross-site compliance tracking, DPDP-safe evidence and plant safety intelligence." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">AI</div>
+        <div>
+          <div class="brand-title">AIonOS</div>
+          <div class="brand-subtitle">IMS for Maruti India</div>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="Demo navigation">
+        <button data-target="overview" class="nav-link active">Command Center</button>
+        <button data-target="plants" class="nav-link">Plant Network</button>
+        <button data-target="video" class="nav-link">Video AI</button>
+        <button data-target="prediction" class="nav-link">Near-Miss Prediction</button>
+        <button data-target="incident" class="nav-link">Incident Documentation</button>
+        <button data-target="compliance" class="nav-link">Compliance Tracker</button>
+        <button data-target="copilot" class="nav-link">Safety Copilot</button>
+        <button data-target="evidence" class="nav-link">Audit Evidence</button>
+      </nav>
+
+      <div class="side-card">
+        <span class="mini-label">Demo mode</span>
+        <strong>Static GitHub Pages</strong>
+        <p>No backend. The plant feed, scenario, incident records, compliance rules and audit trail run from local JSON.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Maruti India · Safety Engineering</p>
+          <h1>AI-driven IMS for multi-plant safety, incident intelligence and compliance readiness</h1>
+          <p class="subhead">Tailored storyline for Gurgaon, Manesar and Gujarat operations: predict near misses, auto-generate incident documentation, and keep a DPDP-safe audit trail before an incident escalates.</p>
+        </div>
+        <div class="top-actions">
+          <button id="startScenarioBtn" class="primary-btn">Start Maruti safety scenario</button>
+          <button id="resetScenarioBtn" class="ghost-btn">Reset</button>
+          <button id="exportJsonBtn" class="ghost-btn">Export evidence JSON</button>
+          <label class="ghost-btn file-label">Import JSON<input id="importJsonInput" type="file" accept="application/json" /></label>
+        </div>
+      </header>
+
+      <section class="hero-grid" id="overview">
+        <div class="hero-card span-2">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Unified safety event chain</p>
+              <h2>From near-miss signal to audit-ready action in one IMS workflow</h2>
+            </div>
+            <span class="live-pill"><span></span> Live simulation</span>
+          </div>
+          <div class="scenario-steps" id="scenarioSteps"></div>
+        </div>
+
+        <div class="agent-card">
+          <p class="eyebrow">IMS Supervisor Agent</p>
+          <h3 id="agentHeadline">Awaiting plant signal</h3>
+          <p id="agentSummary">Press “Start Maruti safety scenario” to trigger camera analytics, risk scoring, documentation, compliance mapping and cross-site closure.</p>
+          <div class="agent-meter"><div id="agentMeterFill"></div></div>
+          <div class="agent-tags" id="agentTags"></div>
+        </div>
+      </section>
+
+      <section class="kpi-grid" id="kpiGrid"></section>
+
+      <section class="content-grid">
+        <div class="panel span-3" id="plants">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Cross-site safety cockpit</p>
+              <h2>Gurgaon, Manesar and Gujarat expansion in one command layer</h2>
+            </div>
+            <span class="muted small">Synthetic demo data · not Maruti operational data</span>
+          </div>
+          <div class="plant-grid" id="plantGrid"></div>
+        </div>
+
+        <div class="panel span-2" id="video">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Video AI feed</p>
+              <h2>Uploaded plant movement video with AI risk overlays</h2>
+            </div>
+            <div class="status-chip" id="videoStatus">Monitoring</div>
+          </div>
+          <div class="video-wrap">
+            <video id="demoVideo" muted loop playsinline controls autoplay preload="metadata">
+              <source src="assets/maruti_plant_safety_feed.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <canvas id="visionOverlay" aria-label="AI overlay canvas"></canvas>
+            <div class="video-hud top-left">
+              <strong>Camera IMS-CV-09</strong><br />Material movement / logistics zone
+            </div>
+            <div class="video-hud bottom-right" id="videoHud">No active violation. Tracking human, vehicle and aisle proximity.</div>
+            <button id="videoPlayBtn" class="video-play-btn" type="button" hidden>Play plant feed</button>
+            <div id="videoError" class="video-error" role="alert" hidden>
+              <strong>Plant feed unavailable</strong>
+              <span>The browser could not load the demo video.</span>
+            </div>
+          </div>
+          <div class="event-strip" id="eventStrip"></div>
+        </div>
+
+        <div class="panel" id="prediction">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Near-miss prediction</p>
+              <h2>Risk score from movement, PPE and zone controls</h2>
+            </div>
+            <span class="status-chip warn" id="riskStatus">Elevated</span>
+          </div>
+          <div class="risk-gauge">
+            <svg viewBox="0 0 220 126" aria-label="near miss risk gauge">
+              <path d="M24 110 A86 86 0 0 1 196 110" class="gauge-bg" />
+              <path id="riskArc" d="M24 110 A86 86 0 0 1 196 110" class="gauge-fill" />
+            </svg>
+            <div class="gauge-value"><span id="riskScore">0</span><small>% near-miss risk</small></div>
+          </div>
+          <canvas id="riskTrendChart" class="chart short"></canvas>
+          <div class="insight-list" id="riskInsights"></div>
+        </div>
+
+        <div class="panel span-2" id="incident">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Automated documentation</p>
+              <h2>Incident pack drafted before manual reporting starts</h2>
+            </div>
+            <button id="createIncidentBtn" class="primary-btn small-btn">Generate incident pack</button>
+          </div>
+          <div class="incident-layout">
+            <div class="incident-card" id="incidentCard"></div>
+            <div>
+              <h3>AI-generated timeline</h3>
+              <div class="timeline" id="incidentTimeline"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" id="closure">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Corrective actions</p>
+              <h2>CAPA queue</h2>
+            </div>
+            <span class="status-chip">Actionable</span>
+          </div>
+          <div class="capa-list" id="capaList"></div>
+        </div>
+
+        <div class="panel span-3" id="compliance">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Regulatory readiness</p>
+              <h2>BNVSAP/Bharat NCAP, AIS and DPDP mapped into one compliance tracker</h2>
+            </div>
+            <span class="muted small">Use as consultative demo; validate final obligations with legal/EHS teams</span>
+          </div>
+          <div class="table-wrap"><table id="complianceTable"></table></div>
+        </div>
+
+        <div class="panel span-2" id="copilot">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Safety Copilot</p>
+              <h2>Ask the IMS knowledge agent</h2>
+            </div>
+            <span class="status-chip">RAG simulation</span>
+          </div>
+          <div class="quick-prompts" id="quickPrompts"></div>
+          <div class="copilot-box">
+            <div class="chat-window" id="chatWindow"></div>
+            <form id="copilotForm" class="chat-form">
+              <input id="copilotInput" type="text" placeholder="Ask: what evidence is needed for a near-miss audit?" autocomplete="off" />
+              <button class="primary-btn" type="submit">Ask</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="panel" id="impact">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Business impact</p>
+              <h2>Manual reporting burden removed</h2>
+            </div>
+          </div>
+          <canvas id="impactChart" class="chart short"></canvas>
+          <div class="insight-list" id="impactInsights"></div>
+        </div>
+
+        <div class="panel span-3" id="evidence">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">DPDP-safe evidence vault</p>
+              <h2>Audit trail, redaction policy and generated records stored as JSON</h2>
+            </div>
+            <span class="muted small">Everything is reproducible from data/demo-data.json</span>
+          </div>
+          <div class="evidence-grid">
+            <div>
+              <h3>Audit trail</h3>
+              <div id="auditTrail" class="doc-list"></div>
+            </div>
+            <div>
+              <h3>Evidence objects</h3>
+              <div id="evidenceObjects" class="doc-list"></div>
+            </div>
+            <div>
+              <h3>DPDP controls</h3>
+              <div id="dpdpControls" class="doc-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span>Built as a static AIonOS IMS reference demo tailored for Maruti India safety/compliance conversations.</span>
+        <span>Synthetic data only · GitHub Pages ready · No backend required</span>
+      </footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
