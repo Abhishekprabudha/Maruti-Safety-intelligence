@@ -1,0 +1,947 @@
+{
+  "meta": {
+    "project": "Maruti India IMS Safety Intelligence Command Center",
+    "poweredBy": "AIonOS",
+    "mode": "Static GitHub Pages demo",
+    "dataClassification": "Synthetic demo data only - no Maruti production data",
+    "generatedOn": "2026-06-30",
+    "videoAsset": "assets/maruti_plant_safety_feed.mp4"
+  },
+  "scenario": {
+    "name": "Near-miss predicted and documented across multi-plant IMS workflow",
+    "durationSeconds": 36,
+    "script": [
+      "Plant video feed is connected. IMS starts with baseline safety monitoring across material movement zones.",
+      "Computer vision flags a human-vehicle proximity breach near a marked aisle and detects PPE confidence drop.",
+      "Near-Miss Prediction Agent correlates proximity, aisle congestion, shift timing and historical events.",
+      "Incident Documentation Agent drafts an audit-ready near-miss report with timestamped evidence and redaction status.",
+      "Compliance Agent maps the event to BNVSAP/Bharat NCAP readiness, AIS traceability and DPDP controls.",
+      "Cross-site Tracker compares Gurgaon, Manesar and Gujarat risk patterns and assigns CAPA owners.",
+      "IMS Supervisor Agent publishes the evidence pack and prepares the safety-engineering review queue."
+    ],
+    "kpis": {
+      "nearMissesPredicted": 18,
+      "autoDocumentationRate": 86,
+      "avgReportTimeMinutes": 6,
+      "manualReportTimeMinutes": 42,
+      "complianceReadiness": 91,
+      "dpdpRedactionCoverage": 98,
+      "openCorrectiveActions": 7,
+      "auditPackCompleteness": 94
+    }
+  },
+  "plants": [
+    {
+      "name": "Gurgaon",
+      "focus": "Assembly + logistics movement",
+      "riskScore": 62,
+      "nearMisses": 5,
+      "openActions": 2,
+      "readiness": 90,
+      "status": "Watch",
+      "primaryRisk": "Forklift / pedestrian proximity near trim line material bay"
+    },
+    {
+      "name": "Manesar",
+      "focus": "High-volume production + paint/body areas",
+      "riskScore": 74,
+      "nearMisses": 8,
+      "openActions": 3,
+      "readiness": 88,
+      "status": "Elevated",
+      "primaryRisk": "Aisle congestion during shift handover"
+    },
+    {
+      "name": "Gujarat expansion",
+      "focus": "New capacity + ramp-up governance",
+      "riskScore": 58,
+      "nearMisses": 3,
+      "openActions": 1,
+      "readiness": 93,
+      "status": "Stable",
+      "primaryRisk": "New-zone SOP adherence and contractor onboarding"
+    },
+    {
+      "name": "Supplier yard",
+      "focus": "Inbound material staging",
+      "riskScore": 69,
+      "nearMisses": 2,
+      "openActions": 1,
+      "readiness": 86,
+      "status": "Watch",
+      "primaryRisk": "Vehicle queueing and document check delays"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-IMS-0915",
+      "time": "09:15:08",
+      "plant": "Manesar",
+      "zone": "Material aisle MNS-LG-04",
+      "type": "Human-vehicle proximity",
+      "severity": "High",
+      "confidence": 94,
+      "status": "Active",
+      "summary": "Worker movement path intersects a powered material carrier lane within the next 18 seconds."
+    },
+    {
+      "id": "EVT-IMS-0916",
+      "time": "09:16:22",
+      "plant": "Manesar",
+      "zone": "Inbound buffer",
+      "type": "PPE confidence drop",
+      "severity": "Medium",
+      "confidence": 86,
+      "status": "Monitoring",
+      "summary": "Helmet/vest visibility score drops below site threshold because of occlusion and crowding."
+    },
+    {
+      "id": "EVT-IMS-0918",
+      "time": "09:18:40",
+      "plant": "Gurgaon",
+      "zone": "Final assembly staging",
+      "type": "Aisle dwell time anomaly",
+      "severity": "Medium",
+      "confidence": 81,
+      "status": "Watching",
+      "summary": "Stationary material pallet is causing excess foot traffic deviation near marked boundary."
+    }
+  ],
+  "riskTrend": [
+    {
+      "time": "09:15",
+      "riskScore": 35.1,
+      "trafficDensity": 36.4,
+      "ppeConfidence": 93.3
+    },
+    {
+      "time": "09:20",
+      "riskScore": 32.8,
+      "trafficDensity": 49.2,
+      "ppeConfidence": 94.5
+    },
+    {
+      "time": "09:25",
+      "riskScore": 39.1,
+      "trafficDensity": 42.9,
+      "ppeConfidence": 93.8
+    },
+    {
+      "time": "09:30",
+      "riskScore": 33.2,
+      "trafficDensity": 47.4,
+      "ppeConfidence": 94.0
+    },
+    {
+      "time": "09:35",
+      "riskScore": 34.1,
+      "trafficDensity": 49.6,
+      "ppeConfidence": 94.4
+    },
+    {
+      "time": "09:40",
+      "riskScore": 39.2,
+      "trafficDensity": 52.2,
+      "ppeConfidence": 94.3
+    },
+    {
+      "time": "09:45",
+      "riskScore": 42.1,
+      "trafficDensity": 51.2,
+      "ppeConfidence": 94.9
+    },
+    {
+      "time": "09:50",
+      "riskScore": 42.0,
+      "trafficDensity": 57.6,
+      "ppeConfidence": 93.0
+    },
+    {
+      "time": "09:55",
+      "riskScore": 44.8,
+      "trafficDensity": 58.9,
+      "ppeConfidence": 92.8
+    },
+    {
+      "time": "10:00",
+      "riskScore": 38.6,
+      "trafficDensity": 67.1,
+      "ppeConfidence": 94.3
+    },
+    {
+      "time": "10:05",
+      "riskScore": 44.9,
+      "trafficDensity": 66.0,
+      "ppeConfidence": 94.1
+    },
+    {
+      "time": "10:10",
+      "riskScore": 46.7,
+      "trafficDensity": 61.3,
+      "ppeConfidence": 94.2
+    },
+    {
+      "time": "10:15",
+      "riskScore": 46.0,
+      "trafficDensity": 64.5,
+      "ppeConfidence": 95.1
+    },
+    {
+      "time": "10:20",
+      "riskScore": 44.3,
+      "trafficDensity": 65.0,
+      "ppeConfidence": 92.6
+    },
+    {
+      "time": "10:25",
+      "riskScore": 41.7,
+      "trafficDensity": 58.2,
+      "ppeConfidence": 92.7
+    },
+    {
+      "time": "10:30",
+      "riskScore": 41.8,
+      "trafficDensity": 54.2,
+      "ppeConfidence": 93.3
+    },
+    {
+      "time": "10:35",
+      "riskScore": 45.1,
+      "trafficDensity": 56.2,
+      "ppeConfidence": 93.6
+    },
+    {
+      "time": "10:40",
+      "riskScore": 41.6,
+      "trafficDensity": 52.8,
+      "ppeConfidence": 95.3
+    },
+    {
+      "time": "10:45",
+      "riskScore": 44.9,
+      "trafficDensity": 55.3,
+      "ppeConfidence": 93.0
+    },
+    {
+      "time": "10:50",
+      "riskScore": 45.3,
+      "trafficDensity": 46.6,
+      "ppeConfidence": 93.6
+    },
+    {
+      "time": "10:55",
+      "riskScore": 47.0,
+      "trafficDensity": 50.6,
+      "ppeConfidence": 94.2
+    },
+    {
+      "time": "11:00",
+      "riskScore": 44.1,
+      "trafficDensity": 50.6,
+      "ppeConfidence": 94.8
+    },
+    {
+      "time": "11:05",
+      "riskScore": 39.9,
+      "trafficDensity": 36.4,
+      "ppeConfidence": 93.4
+    },
+    {
+      "time": "11:10",
+      "riskScore": 39.6,
+      "trafficDensity": 36.1,
+      "ppeConfidence": 95.3
+    },
+    {
+      "time": "11:15",
+      "riskScore": 43.8,
+      "trafficDensity": 34.7,
+      "ppeConfidence": 94.5
+    },
+    {
+      "time": "11:20",
+      "riskScore": 39.1,
+      "trafficDensity": 40.5,
+      "ppeConfidence": 93.9
+    },
+    {
+      "time": "11:25",
+      "riskScore": 37.3,
+      "trafficDensity": 28.6,
+      "ppeConfidence": 94.2
+    },
+    {
+      "time": "11:30",
+      "riskScore": 36.4,
+      "trafficDensity": 31.1,
+      "ppeConfidence": 95.2
+    },
+    {
+      "time": "11:35",
+      "riskScore": 36.5,
+      "trafficDensity": 23.9,
+      "ppeConfidence": 95.5
+    },
+    {
+      "time": "11:40",
+      "riskScore": 36.5,
+      "trafficDensity": 20.4,
+      "ppeConfidence": 92.6
+    },
+    {
+      "time": "11:45",
+      "riskScore": 32.3,
+      "trafficDensity": 26.6,
+      "ppeConfidence": 94.9
+    },
+    {
+      "time": "11:50",
+      "riskScore": 33.8,
+      "trafficDensity": 17.7,
+      "ppeConfidence": 93.6
+    },
+    {
+      "time": "11:55",
+      "riskScore": 37.4,
+      "trafficDensity": 23.6,
+      "ppeConfidence": 95.4
+    },
+    {
+      "time": "12:00",
+      "riskScore": 35.3,
+      "trafficDensity": 16.2,
+      "ppeConfidence": 94.7
+    },
+    {
+      "time": "12:05",
+      "riskScore": 32.9,
+      "trafficDensity": 23.7,
+      "ppeConfidence": 93.3
+    },
+    {
+      "time": "12:10",
+      "riskScore": 31.6,
+      "trafficDensity": 18.4,
+      "ppeConfidence": 93.8
+    },
+    {
+      "time": "12:15",
+      "riskScore": 29.2,
+      "trafficDensity": 31.2,
+      "ppeConfidence": 95.1
+    },
+    {
+      "time": "12:20",
+      "riskScore": 26.8,
+      "trafficDensity": 26.2,
+      "ppeConfidence": 93.0
+    },
+    {
+      "time": "12:25",
+      "riskScore": 31.2,
+      "trafficDensity": 33.1,
+      "ppeConfidence": 93.4
+    },
+    {
+      "time": "12:30",
+      "riskScore": 28.2,
+      "trafficDensity": 31.5,
+      "ppeConfidence": 93.0
+    },
+    {
+      "time": "12:35",
+      "riskScore": 28.5,
+      "trafficDensity": 32.8,
+      "ppeConfidence": 94.8
+    },
+    {
+      "time": "12:40",
+      "riskScore": 26.1,
+      "trafficDensity": 27.7,
+      "ppeConfidence": 93.5
+    },
+    {
+      "time": "12:45",
+      "riskScore": 21.4,
+      "trafficDensity": 43.4,
+      "ppeConfidence": 95.1
+    },
+    {
+      "time": "12:50",
+      "riskScore": 27.5,
+      "trafficDensity": 37.5,
+      "ppeConfidence": 92.7
+    },
+    {
+      "time": "12:55",
+      "riskScore": 27.5,
+      "trafficDensity": 49.3,
+      "ppeConfidence": 92.8
+    },
+    {
+      "time": "13:00",
+      "riskScore": 24.1,
+      "trafficDensity": 39.9,
+      "ppeConfidence": 94.8
+    },
+    {
+      "time": "13:05",
+      "riskScore": 26.2,
+      "trafficDensity": 43.5,
+      "ppeConfidence": 93.9
+    },
+    {
+      "time": "13:10",
+      "riskScore": 24.4,
+      "trafficDensity": 48.1,
+      "ppeConfidence": 95.1
+    },
+    {
+      "time": "13:15",
+      "riskScore": 23.4,
+      "trafficDensity": 49.8,
+      "ppeConfidence": 94.1
+    },
+    {
+      "time": "13:20",
+      "riskScore": 26.7,
+      "trafficDensity": 52.0,
+      "ppeConfidence": 93.4
+    },
+    {
+      "time": "13:25",
+      "riskScore": 29.8,
+      "trafficDensity": 60.3,
+      "ppeConfidence": 93.8
+    },
+    {
+      "time": "13:30",
+      "riskScore": 27.0,
+      "trafficDensity": 54.6,
+      "ppeConfidence": 93.2
+    },
+    {
+      "time": "13:35",
+      "riskScore": 26.8,
+      "trafficDensity": 62.5,
+      "ppeConfidence": 93.2
+    },
+    {
+      "time": "13:40",
+      "riskScore": 28.4,
+      "trafficDensity": 56.2,
+      "ppeConfidence": 94.4
+    },
+    {
+      "time": "13:45",
+      "riskScore": 31.2,
+      "trafficDensity": 68.5,
+      "ppeConfidence": 95.1
+    },
+    {
+      "time": "13:50",
+      "riskScore": 32.8,
+      "trafficDensity": 59.3,
+      "ppeConfidence": 94.5
+    },
+    {
+      "time": "13:55",
+      "riskScore": 36.8,
+      "trafficDensity": 57.6,
+      "ppeConfidence": 95.3
+    },
+    {
+      "time": "14:00",
+      "riskScore": 42.5,
+      "trafficDensity": 61.8,
+      "ppeConfidence": 94.9
+    },
+    {
+      "time": "14:05",
+      "riskScore": 47.4,
+      "trafficDensity": 56.8,
+      "ppeConfidence": 92.8
+    },
+    {
+      "time": "14:10",
+      "riskScore": 47.4,
+      "trafficDensity": 58.7,
+      "ppeConfidence": 93.9
+    },
+    {
+      "time": "14:15",
+      "riskScore": 52.9,
+      "trafficDensity": 60.5,
+      "ppeConfidence": 95.5
+    },
+    {
+      "time": "14:20",
+      "riskScore": 50.9,
+      "trafficDensity": 54.7,
+      "ppeConfidence": 93.5
+    },
+    {
+      "time": "14:25",
+      "riskScore": 60.1,
+      "trafficDensity": 50.2,
+      "ppeConfidence": 93.0
+    },
+    {
+      "time": "14:30",
+      "riskScore": 60.0,
+      "trafficDensity": 50.1,
+      "ppeConfidence": 93.3
+    },
+    {
+      "time": "14:35",
+      "riskScore": 61.5,
+      "trafficDensity": 54.5,
+      "ppeConfidence": 93.6
+    },
+    {
+      "time": "14:40",
+      "riskScore": 69.5,
+      "trafficDensity": 46.5,
+      "ppeConfidence": 90.9
+    },
+    {
+      "time": "14:45",
+      "riskScore": 73.7,
+      "trafficDensity": 47.6,
+      "ppeConfidence": 92.9
+    },
+    {
+      "time": "14:50",
+      "riskScore": 76.1,
+      "trafficDensity": 45.0,
+      "ppeConfidence": 90.1
+    },
+    {
+      "time": "14:55",
+      "riskScore": 75.6,
+      "trafficDensity": 33.3,
+      "ppeConfidence": 90.9
+    },
+    {
+      "time": "15:00",
+      "riskScore": 75.2,
+      "trafficDensity": 32.9,
+      "ppeConfidence": 92.7
+    },
+    {
+      "time": "15:05",
+      "riskScore": 54.5,
+      "trafficDensity": 36.1,
+      "ppeConfidence": 93.9
+    },
+    {
+      "time": "15:10",
+      "riskScore": 56.6,
+      "trafficDensity": 36.2,
+      "ppeConfidence": 95.5
+    },
+    {
+      "time": "15:15",
+      "riskScore": 58.4,
+      "trafficDensity": 30.9,
+      "ppeConfidence": 93.0
+    },
+    {
+      "time": "15:20",
+      "riskScore": 56.9,
+      "trafficDensity": 32.7,
+      "ppeConfidence": 94.2
+    },
+    {
+      "time": "15:25",
+      "riskScore": 59.4,
+      "trafficDensity": 28.2,
+      "ppeConfidence": 92.7
+    },
+    {
+      "time": "15:30",
+      "riskScore": 60.2,
+      "trafficDensity": 23.8,
+      "ppeConfidence": 95.0
+    },
+    {
+      "time": "15:35",
+      "riskScore": 57.2,
+      "trafficDensity": 29.6,
+      "ppeConfidence": 92.7
+    },
+    {
+      "time": "15:40",
+      "riskScore": 57.7,
+      "trafficDensity": 24.3,
+      "ppeConfidence": 94.5
+    },
+    {
+      "time": "15:45",
+      "riskScore": 58.3,
+      "trafficDensity": 17.9,
+      "ppeConfidence": 95.2
+    },
+    {
+      "time": "15:50",
+      "riskScore": 58.4,
+      "trafficDensity": 25.2,
+      "ppeConfidence": 94.4
+    },
+    {
+      "time": "15:55",
+      "riskScore": 59.8,
+      "trafficDensity": 26.0,
+      "ppeConfidence": 94.1
+    },
+    {
+      "time": "16:00",
+      "riskScore": 63.8,
+      "trafficDensity": 22.1,
+      "ppeConfidence": 94.0
+    },
+    {
+      "time": "16:05",
+      "riskScore": 58.0,
+      "trafficDensity": 26.5,
+      "ppeConfidence": 94.5
+    },
+    {
+      "time": "16:10",
+      "riskScore": 58.2,
+      "trafficDensity": 27.4,
+      "ppeConfidence": 94.8
+    },
+    {
+      "time": "16:15",
+      "riskScore": 55.9,
+      "trafficDensity": 31.7,
+      "ppeConfidence": 95.5
+    },
+    {
+      "time": "16:20",
+      "riskScore": 62.8,
+      "trafficDensity": 28.8,
+      "ppeConfidence": 92.6
+    },
+    {
+      "time": "16:25",
+      "riskScore": 56.4,
+      "trafficDensity": 43.5,
+      "ppeConfidence": 95.1
+    },
+    {
+      "time": "16:30",
+      "riskScore": 60.7,
+      "trafficDensity": 38.4,
+      "ppeConfidence": 92.8
+    },
+    {
+      "time": "16:35",
+      "riskScore": 59.6,
+      "trafficDensity": 46.0,
+      "ppeConfidence": 94.3
+    },
+    {
+      "time": "16:40",
+      "riskScore": 60.1,
+      "trafficDensity": 48.1,
+      "ppeConfidence": 92.5
+    },
+    {
+      "time": "16:45",
+      "riskScore": 57.9,
+      "trafficDensity": 45.9,
+      "ppeConfidence": 94.5
+    },
+    {
+      "time": "16:50",
+      "riskScore": 58.0,
+      "trafficDensity": 46.3,
+      "ppeConfidence": 92.8
+    },
+    {
+      "time": "16:55",
+      "riskScore": 50.5,
+      "trafficDensity": 54.6,
+      "ppeConfidence": 93.3
+    },
+    {
+      "time": "17:00",
+      "riskScore": 53.5,
+      "trafficDensity": 59.2,
+      "ppeConfidence": 93.1
+    },
+    {
+      "time": "17:05",
+      "riskScore": 52.8,
+      "trafficDensity": 54.9,
+      "ppeConfidence": 94.0
+    },
+    {
+      "time": "17:10",
+      "riskScore": 54.1,
+      "trafficDensity": 64.7,
+      "ppeConfidence": 92.8
+    }
+  ],
+  "riskInsights": [
+    {
+      "title": "Top driver",
+      "body": "Aisle density rose 27% above the 14-day baseline during the 09:00 shift handover window."
+    },
+    {
+      "title": "Predictive trigger",
+      "body": "Near-miss probability crossed the 70% intervention threshold because proximity, occlusion and dwell time rose together."
+    },
+    {
+      "title": "Recommended prevention",
+      "body": "Trigger voice/andon alert, route material carrier to alternate lane, and assign floor marshal for the next 20 minutes."
+    }
+  ],
+  "incident": {
+    "id": "IMS-NM-2026-0630-0915",
+    "title": "Predicted near miss: powered vehicle and pedestrian proximity",
+    "plant": "Manesar",
+    "zone": "Material aisle MNS-LG-04",
+    "time": "2026-06-30 09:15:08 IST",
+    "severity": "High potential / no injury",
+    "classification": "Near miss / proactive intervention",
+    "generatedBy": "AIonOS IMS Documentation Agent",
+    "redaction": "Faces blurred, worker identifiers tokenized, access logged",
+    "evidence": "Video frame sequence, model rationale, proximity score, zone map, CAPA actions",
+    "status": "Draft ready for EHS supervisor approval"
+  },
+  "timeline": [
+    {
+      "time": "09:15",
+      "label": "Camera feed ingested",
+      "detail": "IMS-CV-09 frame stream linked to material aisle MNS-LG-04."
+    },
+    {
+      "time": "09:15",
+      "label": "Risk detected",
+      "detail": "Human-vehicle distance estimate crosses safety threshold in active traffic zone."
+    },
+    {
+      "time": "09:16",
+      "label": "Automated alert",
+      "detail": "Andon + floor marshal recommendation issued before contact event occurs."
+    },
+    {
+      "time": "09:18",
+      "label": "Evidence packet",
+      "detail": "Video clip, risk score, zone metadata and DPDP redaction status attached."
+    },
+    {
+      "time": "09:22",
+      "label": "CAPA created",
+      "detail": "Aisle separation reinforcement and shift handover crowding review assigned."
+    }
+  ],
+  "capa": [
+    {
+      "id": "CAPA-1421",
+      "title": "Reinforce pedestrian boundary at MNS-LG-04",
+      "owner": "Manesar EHS Lead",
+      "due": "48 hours",
+      "priority": "High",
+      "status": "Open"
+    },
+    {
+      "id": "CAPA-1422",
+      "title": "Update material carrier routing during shift handover",
+      "owner": "Logistics Supervisor",
+      "due": "72 hours",
+      "priority": "High",
+      "status": "Open"
+    },
+    {
+      "id": "CAPA-1423",
+      "title": "Contractor refresher on aisle crossing protocol",
+      "owner": "Training Coordinator",
+      "due": "5 days",
+      "priority": "Medium",
+      "status": "Queued"
+    },
+    {
+      "id": "CAPA-1424",
+      "title": "Review camera occlusion and PPE visibility score",
+      "owner": "Plant IT / Safety Systems",
+      "due": "7 days",
+      "priority": "Medium",
+      "status": "Queued"
+    }
+  ],
+  "complianceMatrix": [
+    {
+      "standard": "BNVSAP Phase 2 / Bharat NCAP readiness",
+      "whyItMatters": "Vehicle safety expectations are rising from compliance to measurable safety performance and traceability.",
+      "imsControl": "Safety intelligence links plant incidents, process defects, containment actions and management review evidence.",
+      "evidence": "Near-miss pack, CAPA closure, management review notes, trend dashboard",
+      "status": "Mapped",
+      "risk": "Medium"
+    },
+    {
+      "standard": "AIS standards traceability",
+      "whyItMatters": "AIS obligations require disciplined documentation of process controls, deviations and corrective actions across manufacturing quality and safety workflows.",
+      "imsControl": "Event-to-standard mapping, process audit checklist, corrective action lineage and version-controlled SOP library.",
+      "evidence": "AIS control checklist, SOP retrieval log, action owner history",
+      "status": "Mapped",
+      "risk": "Medium"
+    },
+    {
+      "standard": "DPDP Act data governance",
+      "whyItMatters": "Incident reporting often captures images, names, IDs, shift details and personal data; access, purpose limitation and deletion need controls.",
+      "imsControl": "Automated redaction, role-based access, purpose tags, retention windows and exportable processing logs.",
+      "evidence": "Redaction hash, access log, consent/purpose tag, retention clock",
+      "status": "Control active",
+      "risk": "Low"
+    },
+    {
+      "standard": "Internal EHS / plant safety SOPs",
+      "whyItMatters": "Local safety procedures must be applied consistently across Gurgaon, Manesar and Gujarat expansion zones.",
+      "imsControl": "SOP Copilot, shift handover alerts, inspection checklist and CAPA follow-up workflow.",
+      "evidence": "SOP answer trace, checklist pass/fail, supervisor sign-off",
+      "status": "Control active",
+      "risk": "Medium"
+    },
+    {
+      "standard": "Cross-site audit readiness",
+      "whyItMatters": "Multi-plant operations need consistent incident taxonomies and evidence quality across sites.",
+      "imsControl": "Common risk taxonomy, normalized incident report template, cross-site heatmap and closure SLA tracking.",
+      "evidence": "Unified incident register, SLA scorecard, site comparison dashboard",
+      "status": "In progress",
+      "risk": "Medium"
+    }
+  ],
+  "knowledgeQuestions": [
+    {
+      "q": "What evidence is needed for a near-miss audit?",
+      "a": "The IMS evidence pack should include event time, plant and zone, video frame reference, model confidence, safety threshold breached, supervisor review, CAPA owner, closure SLA and DPDP redaction/access logs.",
+      "source": "IMS-NM Audit Pack Template v1"
+    },
+    {
+      "q": "How does DPDP affect incident reporting?",
+      "a": "Incident records may include personal data in video, shift logs or worker identifiers. The demo shows purpose tagging, tokenization, face/identity redaction, role-based access and retention clocks before evidence is exported.",
+      "source": "DPDP-safe evidence design"
+    },
+    {
+      "q": "Why does Maruti need cross-site compliance tracking?",
+      "a": "When Gurgaon, Manesar and Gujarat use one incident taxonomy, leaders can compare risk patterns, closure quality and audit readiness instead of manually reconciling separate plant reports.",
+      "source": "Cross-site IMS operating model"
+    },
+    {
+      "q": "What action should be taken first?",
+      "a": "The first action is prevention: alert the floor marshal, slow or reroute the material carrier, and create a high-priority CAPA for lane separation and shift-handover congestion control.",
+      "source": "Near-miss intervention SOP"
+    },
+    {
+      "q": "How does this reduce manual reporting?",
+      "a": "The Documentation Agent pre-fills the report, attaches evidence, maps compliance obligations, redacts personal data and assigns action owners, reducing draft time from 42 minutes to roughly 6 minutes in the synthetic scenario.",
+      "source": "Synthetic productivity benchmark"
+    }
+  ],
+  "impact": [
+    {
+      "label": "Manual report drafting",
+      "before": 42,
+      "after": 6
+    },
+    {
+      "label": "Evidence collation",
+      "before": 28,
+      "after": 5
+    },
+    {
+      "label": "Compliance mapping",
+      "before": 35,
+      "after": 7
+    },
+    {
+      "label": "CAPA assignment",
+      "before": 18,
+      "after": 3
+    }
+  ],
+  "auditTrail": [
+    {
+      "time": "09:15:08",
+      "actor": "Vision Agent",
+      "action": "Detected proximity event and opened near-miss case",
+      "hash": "d92a...81f"
+    },
+    {
+      "time": "09:15:14",
+      "actor": "Risk Agent",
+      "action": "Crossed 70% intervention threshold; suggested andon alert",
+      "hash": "a451...f30"
+    },
+    {
+      "time": "09:16:02",
+      "actor": "Documentation Agent",
+      "action": "Drafted incident report and attached video evidence reference",
+      "hash": "f918...3ab"
+    },
+    {
+      "time": "09:17:20",
+      "actor": "DPDP Guardrail",
+      "action": "Tokenized worker identifiers and logged purpose tag: EHS incident review",
+      "hash": "c052...77e"
+    },
+    {
+      "time": "09:22:41",
+      "actor": "IMS Supervisor Agent",
+      "action": "Assigned CAPA owners and published review queue",
+      "hash": "e76d...190"
+    }
+  ],
+  "evidenceObjects": [
+    {
+      "name": "Video clip reference",
+      "description": "20-second window around predicted near miss, with frame-level object metadata and confidence scores.",
+      "owner": "EHS Supervisor",
+      "retention": "90 days unless escalated"
+    },
+    {
+      "name": "Zone risk snapshot",
+      "description": "Aisle congestion, dwell time, PPE visibility and traffic movement score for MNS-LG-04.",
+      "owner": "Safety Analytics",
+      "retention": "365 days aggregated"
+    },
+    {
+      "name": "CAPA closure record",
+      "description": "Action owner, due date, evidence attachment and supervisor sign-off history.",
+      "owner": "Plant EHS",
+      "retention": "Audit cycle"
+    },
+    {
+      "name": "Compliance mapping log",
+      "description": "Mappings to BNVSAP/Bharat NCAP readiness, AIS control lineage and DPDP data controls.",
+      "owner": "Compliance Office",
+      "retention": "Audit cycle"
+    }
+  ],
+  "dpdpControls": [
+    {
+      "control": "Purpose limitation",
+      "description": "Incident evidence is tagged for EHS incident review and audit readiness only."
+    },
+    {
+      "control": "Redaction by default",
+      "description": "Faces, badge IDs and raw worker identifiers are masked/tokenized before report export."
+    },
+    {
+      "control": "Role-based access",
+      "description": "Only EHS, plant leadership and authorized compliance reviewers can view evidence."
+    },
+    {
+      "control": "Retention clock",
+      "description": "Video evidence has a defined retention period with escalation override and deletion queue."
+    },
+    {
+      "control": "Access logging",
+      "description": "Every view/export is logged into the audit trail for review."
+    }
+  ]
+}
