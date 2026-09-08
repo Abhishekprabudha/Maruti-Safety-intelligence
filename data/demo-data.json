@@ -1,11 +1,11 @@
 {
   "meta": {
-    "project": "Maruti India IMS Safety Intelligence Command Center",
+    "project": "IMS Safety Intelligence Command Center",
     "poweredBy": "AIonOS",
     "mode": "Static GitHub Pages demo",
-    "dataClassification": "Synthetic demo data only - no Maruti production data",
+    "dataClassification": "Synthetic demo data only - no operational production data",
     "generatedOn": "2026-06-30",
-    "videoAsset": "assets/maruti_plant_safety_feed.mp4"
+    "videoAsset": "assets/plant_safety_feed.mp4"
   },
   "scenario": {
     "name": "Near-miss predicted and documented across multi-plant IMS workflow",
@@ -827,7 +827,7 @@
       "source": "DPDP-safe evidence design"
     },
     {
-      "q": "Why does Maruti need cross-site compliance tracking?",
+      "q": "Why do multi-site operations need cross-site compliance tracking?",
       "a": "When Gurgaon, Manesar and Gujarat use one incident taxonomy, leaders can compare risk patterns, closure quality and audit readiness instead of manually reconciling separate plant reports.",
       "source": "Cross-site IMS operating model"
     },

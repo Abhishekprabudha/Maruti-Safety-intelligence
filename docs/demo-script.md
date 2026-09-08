@@ -1,4 +1,4 @@
-# Maruti India IMS Demo Script
+# IMS Safety Intelligence Demo Script
 
 ## 0:00 — Position the problem
 India's automotive compliance bar is tightening. A multi-plant safety leader needs incident intelligence, not just incident reporting. The demo shows how AIonOS IMS predicts near misses, automatically documents events and maintains compliance evidence across Gurgaon, Manesar and Gujarat-style operations.
@@ -7,7 +7,7 @@ India's automotive compliance bar is tightening. A multi-plant safety leader nee
 Point to the six KPI cards: near misses predicted, report draft time reduction, auto-documentation rate, compliance readiness, DPDP redaction coverage and audit-pack completeness.
 
 ## 1:30 — Start scenario
-Click **Start Maruti safety scenario**. Explain that the IMS Supervisor Agent is coordinating Video AI, Risk Agent, Documentation Agent, Compliance Agent and Cross-Site Tracker.
+Click **Start safety scenario**. Explain that the IMS Supervisor Agent is coordinating Video AI, Risk Agent, Documentation Agent, Compliance Agent and Cross-Site Tracker.
 
 ## 2:15 — Video AI overlay
 Use the uploaded video feed. Show the active material aisle, worker path, vehicle/trolley lane and predicted conflict overlay. The key message: prevention starts before contact, injury or downtime.

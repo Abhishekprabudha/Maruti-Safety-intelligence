@@ -278,7 +278,7 @@ function resetScenario() {
   state.activeEventId = null;
   state.incidentGenerated = false;
   $('#agentHeadline').textContent = 'Awaiting plant signal';
-  $('#agentSummary').textContent = 'Press “Start Maruti safety scenario” to trigger camera analytics, risk scoring, documentation, compliance mapping and cross-site closure.';
+  $('#agentSummary').textContent = 'Press “Start safety scenario” to trigger camera analytics, risk scoring, documentation, compliance mapping and cross-site closure.';
   $('#agentMeterFill').style.width = '5%';
   $('#agentTags').innerHTML = '';
   $$('.step-card').forEach(c => c.classList.remove('active','done'));
@@ -492,7 +492,7 @@ function exportEvidenceJson() {
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'maruti-ims-evidence-export.json';
+  a.download = 'ims-evidence-export.json';
   a.click();
   URL.revokeObjectURL(a.href);
 }
