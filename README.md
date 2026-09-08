@@ -1,6 +1,6 @@
-# Maruti India IMS Safety Intelligence Command Center — AIonOS Static Demo
+# IMS Safety Intelligence Command Center — AIonOS Static Demo
 
-A GitHub Pages-ready demo tailored to the Maruti India safety/compliance narrative:
+A GitHub Pages-ready demo for industrial safety and compliance workflows:
 
 - AI-driven near-miss prediction from plant video and zone telemetry
 - Uploaded plant movement video embedded with live AI overlays
@@ -10,7 +10,7 @@ A GitHub Pages-ready demo tailored to the Maruti India safety/compliance narrati
 - Safety Copilot with RAG-style answers from synthetic IMS knowledge
 - Export/import JSON so the entire scenario is reproducible with no backend
 
-> Important: This is synthetic demo data and a consultative reference implementation. It does not contain Maruti operational data and should not be treated as legal/EHS advice.
+> Important: This is synthetic demo data and a consultative reference implementation. It does not contain operational production data and should not be treated as legal/EHS advice.
 
 ## How to run locally
 
@@ -19,7 +19,7 @@ The app fetches `data/demo-data.json`, so run through a static server.
 ### Option 1: Python static server
 
 ```bash
-cd Maruti-IMS-Safety-Demo
+cd IMS-Safety-Intelligence-Demo
 python -m http.server 8080
 ```
 
@@ -47,7 +47,7 @@ npm run dev
 
 ## Demo storyline
 
-1. Start plant video monitoring across Maruti-style material movement zones.
+1. Start plant video monitoring across industrial material movement zones.
 2. Video AI flags a predicted human-vehicle proximity near miss.
 3. Risk Agent correlates aisle congestion, PPE confidence, dwell time and shift context.
 4. Documentation Agent drafts an incident pack with video evidence and timeline.
@@ -58,7 +58,7 @@ npm run dev
 ## File structure
 
 ```text
-Maruti-IMS-Safety-Demo/
+IMS-Safety-Intelligence-Demo/
   index.html
   styles.css
   app.js
@@ -66,7 +66,7 @@ Maruti-IMS-Safety-Demo/
   data/
     demo-data.json
   assets/
-    maruti_plant_safety_feed.mp4
+    plant_safety_feed.mp4
   docs/
     demo-script.md
 ```
@@ -74,9 +74,8 @@ Maruti-IMS-Safety-Demo/
 ## What to show in a client demo
 
 - Open with the cross-site KPI tiles and plant cards.
-- Press **Start Maruti safety scenario**.
+- Press **Start safety scenario**.
 - Let the video run and point out the AI overlays on human path, vehicle lane, active material aisle and predicted conflict.
 - Click **Generate incident pack** to show automated documentation.
 - Use the **Safety Copilot** prompts, especially “How does DPDP affect incident reporting?”
 - End with the compliance tracker and DPDP-safe evidence vault.
-
