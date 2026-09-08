@@ -1,4 +1,4 @@
-# IMS Safety Intelligence Command Center — AIonOS Static Demo
+# IMS Safety Intelligence Command Center — Static Demo
 
 A GitHub Pages-ready demo for industrial safety and compliance workflows:
 

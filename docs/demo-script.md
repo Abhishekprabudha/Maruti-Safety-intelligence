@@ -1,7 +1,7 @@
 # IMS Safety Intelligence Demo Script
 
 ## 0:00 — Position the problem
-India's automotive compliance bar is tightening. A multi-plant safety leader needs incident intelligence, not just incident reporting. The demo shows how AIonOS IMS predicts near misses, automatically documents events and maintains compliance evidence across Gurgaon, Manesar and Gujarat-style operations.
+India's automotive compliance bar is tightening. A multi-plant safety leader needs incident intelligence, not just incident reporting. The demo shows how IMS Safety Intelligence predicts near misses, automatically documents events and maintains compliance evidence across Gurgaon, Manesar and Gujarat-style operations.
 
 ## 0:45 — Show the command center
 Point to the six KPI cards: near misses predicted, report draft time reduction, auto-documentation rate, compliance readiness, DPDP redaction coverage and audit-pack completeness.

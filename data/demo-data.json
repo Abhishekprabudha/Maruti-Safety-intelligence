@@ -1,7 +1,7 @@
 {
   "meta": {
     "project": "IMS Safety Intelligence Command Center",
-    "poweredBy": "AIonOS",
+    "poweredBy": "IMS Safety Intelligence",
     "mode": "Static GitHub Pages demo",
     "dataClassification": "Synthetic demo data only - no operational production data",
     "generatedOn": "2026-06-30",
@@ -707,7 +707,7 @@
     "time": "2026-06-30 09:15:08 IST",
     "severity": "High potential / no injury",
     "classification": "Near miss / proactive intervention",
-    "generatedBy": "AIonOS IMS Documentation Agent",
+    "generatedBy": "IMS Documentation Agent",
     "redaction": "Faces blurred, worker identifiers tokenized, access logged",
     "evidence": "Video frame sequence, model rationale, proximity score, zone map, CAPA actions",
     "status": "Draft ready for EHS supervisor approval"
