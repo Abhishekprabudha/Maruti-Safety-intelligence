@@ -2,7 +2,7 @@
   "name": "ims-safety-intelligence-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "Static AIonOS IMS safety intelligence demo for industrial operations.",
+  "description": "Static IMS safety intelligence demo for industrial operations.",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "preview": "vite --host 0.0.0.0",

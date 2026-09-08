@@ -201,7 +201,7 @@ function renderCompliance() {
       <td>${r.evidence}</td>
       <td><span class="pill ${r.status === 'Control active' ? 'green' : 'medium'}">${r.status}</span></td>
     </tr>`).join('');
-  $('#complianceTable').innerHTML = `<thead><tr><th>Standard / theme</th><th>Why it matters</th><th>AIonOS IMS control</th><th>Evidence generated</th><th>Status</th></tr></thead><tbody>${rows}</tbody>`;
+  $('#complianceTable').innerHTML = `<thead><tr><th>Standard / theme</th><th>Why it matters</th><th>IMS control</th><th>Evidence generated</th><th>Status</th></tr></thead><tbody>${rows}</tbody>`;
 }
 
 function renderCopilot() {
@@ -451,7 +451,7 @@ function drawImpactChart() {
     ctx.fillText(`${item.after}m`, 132 + afterW, y + rowH + 24);
   });
   ctx.fillStyle = 'rgba(234,242,251,.82)'; ctx.font = '12px Inter, sans-serif';
-  ctx.fillText('Manual effort before vs AIonOS IMS after · minutes', 12, 18);
+  ctx.fillText('Manual effort before vs IMS after · minutes', 12, 18);
 }
 
 function drawLines(canvas, points, series, title) {
